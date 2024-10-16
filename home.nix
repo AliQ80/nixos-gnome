@@ -7,6 +7,7 @@
     ./user/apps/terminal/alacritty.nix
     ./user/apps/terminal/kitty.nix
     ./user/apps/terminal/foot.nix
+    ./user/apps/tui/helix.nix
     ./user/apps/gnome-extensions/extension-list.nix
     ./system/fonts.nix
     ./system/git.nix
