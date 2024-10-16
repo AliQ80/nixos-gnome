@@ -81,7 +81,8 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
-    EDITOR = "nvim";
+    # EDITOR = "nvim";
+    EDITOR = "hx";
   };
 
   # Let Home Manager install and manage itself.
