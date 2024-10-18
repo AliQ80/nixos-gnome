@@ -4,6 +4,7 @@
   imports = [
     ./user/shell/zsh.nix
     ./user/shell/cli.nix
+    ./user/shell/lsp.nix
     ./user/apps/terminal/alacritty.nix
     ./user/apps/terminal/kitty.nix
     ./user/apps/terminal/foot.nix
