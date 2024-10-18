@@ -3,8 +3,8 @@
 {
   home.packages = with pkgs; [
     localsend
+    emacs29-pgtk
   ];
-  # programs.localsend = {
-  #   enable = true;
-  # };
+
+  # services.emacs.enable = true;
 }
