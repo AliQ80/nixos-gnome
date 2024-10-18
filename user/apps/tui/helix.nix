@@ -12,6 +12,7 @@
       theme = "catppuccin-frappe-glass";
       editor = {
         color-modes = true;
+        line-number = "relative";
 
         cursor-shape = {
           insert = "bar";  
