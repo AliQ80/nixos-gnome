@@ -10,6 +10,20 @@
 
     settings = {
       theme = "catppuccin-frappe-glass";
+      editor = {
+        color-modes = true;
+
+        cursor-shape = {
+          insert = "bar";  
+        };
+        
+        statusline = {
+          separator = "|";
+          mode.normal = "NORMAL";
+          mode.insert = "INSERT";
+          mode.select = "SELECT";
+        };
+      };
     };
 
     themes = {
