@@ -21,6 +21,16 @@ in
     syntaxHighlighting.enable = true;
     enableCompletion = true;
     shellAliases = myAliases;
+    initExtra = ''
+      function yz() {
+      	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+      	yazi "$@" --cwd-file="$tmp"
+	      if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		      builtin cd -- "$cwd"
+	      fi
+	      rm -f -- "$tmp"
+      }
+    '';
   };
 
 #  programs.bash = {
@@ -29,24 +39,10 @@ in
 #    shellAliases = myAliases;
 #  };
 
-  home.packages = with pkgs; [
-  oh-my-posh
-  zellij
-#    direnv
-#    nix-direnv
-  ];
-
-  programs.oh-my-posh = {
-    enable = true;
-  };
-
-  programs.zellij = {
-    enable = true;
-    enableZshIntegration = true;
-    settings = {
-      theme = "catppuccin-frappe";
-    };
-  };
+#   home.packages = with pkgs; [
+# #    direnv
+# #    nix-direnv
+#   ];
 
 #  programs.direnv.enable = true;
 #  programs.direnv.enableZshIntegration = true;

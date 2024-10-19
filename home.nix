@@ -2,14 +2,26 @@
 
 {
   imports = [
+  # Shell Apps
     ./user/shell/zsh.nix
+    ./user/shell/zellij.nix
+    ./user/shell/posh.nix
+    # ./user/shell/starship.nix
+
+  # Terimenal Apps
     ./user/shell/cli.nix
+    ./user/apps/tui/helix.nix
     ./user/shell/lsp.nix
+
+  # Terminal Emulators
     ./user/apps/terminal/alacritty.nix
     ./user/apps/terminal/kitty.nix
     ./user/apps/terminal/foot.nix
-    ./user/apps/tui/helix.nix
+    
+  # GUI Apps
     ./user/apps/gui/apps.nix
+    
+  # System Apps
     ./user/apps/gnome-extensions/extension-list.nix
     ./system/fonts.nix
     ./system/git.nix

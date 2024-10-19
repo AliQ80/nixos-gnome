@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     # Command Line
     fastfetch
+    onefetch
     btop
     yazi
     lolcat
