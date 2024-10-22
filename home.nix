@@ -5,8 +5,8 @@
   # Shell Apps
     ./user/shell/zsh.nix
     ./user/shell/zellij.nix
-    ./user/shell/posh.nix
-    # ./user/shell/starship.nix
+    # ./user/shell/posh.nix
+    ./user/shell/starship.nix
 
   # Terimenal Apps
     ./user/shell/cli.nix

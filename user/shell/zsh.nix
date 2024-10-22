@@ -21,6 +21,12 @@ in
     syntaxHighlighting.enable = true;
     enableCompletion = true;
     shellAliases = myAliases;
+
+    oh-my-zsh = {
+        enable = true;
+        # plugins = [ "zsh-tab-title" ];
+      };
+
     initExtra = ''
       function yz() {
       	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -39,12 +45,12 @@ in
 #    shellAliases = myAliases;
 #  };
 
-#   home.packages = with pkgs; [
-# #    direnv
-# #    nix-direnv
-#   ];
+  home.packages = with pkgs; [
+   direnv
+   nix-direnv
+  ];
 
-#  programs.direnv.enable = true;
-#  programs.direnv.enableZshIntegration = true;
-#  programs.direnv.nix-direnv.enable = true;
+ programs.direnv.enable = true;
+ programs.direnv.enableZshIntegration = true;
+ programs.direnv.nix-direnv.enable = true;
 }
