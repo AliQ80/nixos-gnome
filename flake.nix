@@ -6,9 +6,16 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # ghostty.url = "git+ssh://git@github.com/ghostty-org/ghostty";
   };
 
-  outputs = { self, nixpkgs, home-manager, ...  }:
+  outputs = { 
+    self, 
+    nixpkgs, 
+    home-manager, 
+    # ghostty, 
+    ...  
+    }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -17,13 +24,22 @@
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
-        modules = [ ./configuration.nix ];
+        modules = [ 
+        ./configuration.nix
+          # {        
+          #   environment.systemPackages = [
+          #     ghostty.packages.x86_64-linux.default
+          #   ];
+          # }
+        ];
       };		
     };
     homeConfigurations = {
       ali = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home.nix ];
+        modules = [ 
+          ./home.nix 
+        ];
       };
     };
   };
