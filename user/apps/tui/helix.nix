@@ -15,7 +15,8 @@
         line-number = "relative";
 
         cursor-shape = {
-          insert = "bar";  
+          insert = "bar";
+          select = "underline";
         };
         
         statusline = {

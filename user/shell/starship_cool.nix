@@ -6,19 +6,14 @@
     # Configuration written to ~/.config/starship.toml
     settings = {
       # add_newline = false;
-
-      # character = {
-      #   success_symbol = "[➜](bold green)";
-      #   error_symbol = "[➜](bold red)";
-      # };
-
       # package.disabled = true;
-        format = "[](#458588)\$os\$username\[](bg:#83a598 fg:#458588)\$directory\[](fg:#83a598 bg:#458588)\$git_branch\$git_status\[](fg:#458588 bg:#665c54)\$c\$rust\$golang\$nodejs\$php\$java\$kotlin\$haskell\$python\[](fg:#665c54 bg:#3c3836)\$time\[](fg:#3c3836)\$line_break$character ";
+      
+        format = "[](#458588)\$os\$username\[](bg:#83a598 fg:#458588)\$directory\[](fg:#83a598 bg:#458588)\$git_branch\$git_status\[](fg:#458588 bg:#665c54)\$c\$rust\$golang\$nodejs\$deno\$lua\$java\$python\$zig\$nix_shell\$direnv\[](fg:#665c54 bg:#3c3836)\$cmd_duration\[](fg:#3c3836)\$line_break$character";
 
         os = {
           disabled = false;
           style    = "bg:#458588 fg:#282828";
-          symbols.NixOS = "󰘳";
+          symbols.NixOS = "❄";
         };
 
         username = {
@@ -53,11 +48,10 @@
           format = "[[($all_status$ahead_behind )](fg:#fbf1c7 bg:#458588)]($style)";
         };
 
-        time = {
+        cmd_duration = {
           disabled    = false;
-          time_format = "%R";
           style       = "bg:#3c3836";
-          format      = "[[  $time ](fg:#fbf1c7 bg:#3c3836)]($style)";
+          format      = "[[  $duration ](fg:#fbf1c7 bg:#3c3836)]($style)";
         };
 
         line_break = {
@@ -66,8 +60,8 @@
 
         character = {
           disabled = false;
-          success_symbol            = "[](bold fg:#98971a)";
-          error_symbol              = "[](bold fg:#cc241a)";
+          success_symbol            = "[ ](bold fg:#98971a)";
+          error_symbol              = "[ ](bold fg:#cc241a)";
         };
 
         nodejs = {
@@ -80,18 +74,38 @@
           style  = "bg:#665c54";
           format = ''[[ $symbol( $version) ](fg:#fbf1c7 bg:#665c54)]($style)'';
         };
-        kotlin = {
-          symbol = "";
+        deno = {
+          symbol = "🦕";
           style  = "bg:#665c54";
           format = ''[[ $symbol( $version) ](fg:#fbf1c7 bg:#665c54)]($style)'';
         };
-        haskell = {
-          symbol = "";
+        lua = {
+          symbol = "🌙";
           style  = "bg:#665c54";
           format = ''[[ $symbol( $version) ](fg:#fbf1c7 bg:#665c54)]($style)'';
         };
-
+        python = {
+          symbol = "🐍";
+          style  = "bg:#665c54";
+          format = ''[[ $symbol( $version) ](fg:#fbf1c7 bg:#665c54)]($style)'';
         };
+        zig = {
+          symbol = "↯";
+          style  = "bg:#665c54";
+          format = ''[[ $symbol( $version) ](fg:#fbf1c7 bg:#665c54)]($style)'';
+        };
+        nix_shell = {
+          symbol = "❄️";
+          style  = "bg:#665c54";
+          format = ''[[ $symbol$state( \\($name\\)) ](fg:#fbf1c7 bg:#665c54)]($style)'';
+        };
+        direnv = {
+          symbol = "direnv ";
+          style  = "bg:#665c54";
+          format = ''[[ $symbol$loaded/$allowed ](fg:#fbf1c7 bg:#665c54)]($style)'';
+         };
+        
+       };
     };
   
 }

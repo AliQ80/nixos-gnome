@@ -6,7 +6,9 @@
     ./user/shell/zsh.nix
     ./user/shell/zellij.nix
     # ./user/shell/posh.nix
-    ./user/shell/starship.nix
+    # ./user/shell/starship.nix
+    # ./user/shell/starship_1.nix
+    ./user/shell/starship_cool.nix
 
   # Terimenal Apps
     ./user/shell/cli.nix
