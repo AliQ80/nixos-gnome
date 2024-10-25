@@ -26,8 +26,23 @@
           mode.select = "SELECT";
         };
       };
+      keys.normal = {
+        A-g = [":new" ":insert-output lazygit" ":buffer-close!" ":redraw"];
+      };
     };
 
+      languages = {
+        language-server.nixd = {
+          command = "nixd";
+        };
+
+        language = [{
+          name = "nix";
+          language-servers = [ "nixd" ];
+          # auto-format = false;
+        }];
+      };
+      
     themes = {
       catppuccin-frappe-glass = {
         inherits = "catppuccin_frappe";
