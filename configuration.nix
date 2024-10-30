@@ -104,16 +104,13 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     gnome-extension-manager
+    _1password
+    _1password-gui
     obsidian
     vivaldi
     google-chrome
     discord
-    obs-studio
     zoom-us
-    krita
-    _1password
-    _1password-gui
-    whatsapp-for-linux
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
