@@ -22,6 +22,7 @@
     
   # GUI Apps
     ./user/apps/gui/apps.nix
+    ./user/apps/gui/office.nix
     
   # System Apps
     ./user/apps/gnome-extensions/extension-list.nix
