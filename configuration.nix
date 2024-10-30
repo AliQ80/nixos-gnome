@@ -57,10 +57,11 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+    layout = "us,ara";
+    options = "grp:win_space_toggle";
+    # variant = "";
   };
-
+  
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -103,8 +104,16 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     gnome-extension-manager
-    vim
-    wget
+    obsidian
+    vivaldi
+    google-chrome
+    discord
+    obs-studio
+    zoom-us
+    krita
+    _1password
+    _1password-gui
+    whatsapp-for-linux
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
