@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     libreoffice
+    onlyoffice-bin
   ];
 
-  # services.emacs.enable = true;
 }
