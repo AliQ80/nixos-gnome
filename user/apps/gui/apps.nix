@@ -5,6 +5,7 @@
     localsend
     emacs29-pgtk
     jetbrains.pycharm-community
+    meld
     python3
     obs-studio
     krita
