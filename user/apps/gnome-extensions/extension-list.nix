@@ -20,7 +20,7 @@
       	"AlphabeticalAppGrid@stuarthayhurst"
       	"blur-my-shell@aunetx"
       	"just-perfection-desktop@just-perfection"
-        "search-light@iceman.github.com"
+        "search-light@icedman.github.com"
       ];
     };
   };
