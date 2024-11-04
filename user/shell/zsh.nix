@@ -22,6 +22,14 @@ in
     enableCompletion = true;
     shellAliases = myAliases;
 
+    history = {
+      save = 10000;
+      size = 10000;
+      expireDuplicatesFirst = true;
+      ignoreDups = true;
+      ignoreSpace = true;
+    };
+
     oh-my-zsh = {
         enable = true;
         # plugins = [ "zsh-tab-title" ];
