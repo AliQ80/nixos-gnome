@@ -2,7 +2,7 @@
 
 ## start a nix shell with git
 ```
-nix-shell git
+nix-shell -p git helix
 ```
 
 ## Get the files
