@@ -11,6 +11,11 @@ nix-shell -p git helix
 git clone https://github.com/AliQ80/nixos-gnome.git .dotfiles
 ```
 
+## copy hardware config to .dotfiles
+```
+cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/
+```
+
 ## build the system
 ```bash
 sudo nixos-rebuild switch --flake ~/.dotfiles
