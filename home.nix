@@ -3,15 +3,14 @@
 {
   imports = [
   # Shell Apps
-    ./user/shell/zsh.nix
-    ./user/shell/zellij.nix
     # ./user/shell/posh.nix
     # ./user/shell/starship.nix
     ./user/shell/starship_cool.nix
+    ./user/shell/zellij.nix
 
   # Terimenal Apps
     ./user/shell/cli.nix
-    ./user/apps/tui/helix.nix
+    ./user/shell/helix.nix
     ./user/shell/lsp.nix
 
   # Terminal Emulators
@@ -20,20 +19,25 @@
     ./user/apps/terminal/foot.nix
     
   # GUI Apps
+    ./user/apps/gnome-extensions/extension-list.nix
     ./user/apps/gui/apps.nix
     ./user/apps/gui/office.nix
     
   # System Apps
-    ./user/apps/gnome-extensions/extension-list.nix
+    ./system/zsh.nix
+    ./system/dconf.nix
     ./system/fonts.nix
     ./system/git.nix
-    ./system/dconf.nix
+    ./system/ssh-config.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "ali";
   home.homeDirectory = "/home/ali";
+
+  # allow unfree apps
+  nixpkgs.config.allowUnfree = true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
