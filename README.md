@@ -8,12 +8,12 @@ nix-shell -p git helix
 ## Get the files
 - clone the repo into .dotfiles
 ```
-git clone https://github.com/AliQ80/nixos-gnome.git .dotfiles
+git clone git@github.com:AliQ80/nixos-gnome.git .dotfiles
 ```
 
 ## copy hardware config to .dotfiles
 ```
-cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/
+cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/hardware.nix
 ```
 
 ## build the system
