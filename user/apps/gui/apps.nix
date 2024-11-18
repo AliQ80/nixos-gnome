@@ -12,5 +12,6 @@
     whatsapp-for-linux
   ];
 
+  services.flameshot.enable = true;
   # services.emacs.enable = true;
 }
