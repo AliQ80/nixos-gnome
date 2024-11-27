@@ -4,6 +4,7 @@ let
   # My shell aliases
   myAliases = {
     ls = "eza --icons --git -l -T -L=1";
+    news = "home-manager news";
 #    cat = "bat";
 #    htop = "btm";
 #    fd = "fd -Lu";
