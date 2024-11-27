@@ -14,6 +14,9 @@
       (google-fonts.override { 
         fonts = [
           "MonteCarlo"
+          "Audiowide"
+          "Nova Square"
+          "Chathura"
         ]; 
       })
       
