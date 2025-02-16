@@ -13,6 +13,8 @@
     whatsapp-for-linux
   ];
 
+  programs.vscode.enable = true;
+
   # services.flameshot.enable = true;
   # services.emacs.enable = true;
 }
