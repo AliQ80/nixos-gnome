@@ -105,6 +105,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    home-manager
+    fprintd
     gnome-extension-manager
     _1password
     _1password-gui
@@ -124,7 +126,13 @@
   # };
 
   # List services that you want to enable:
-
+  services.fprintd = {
+    enable = true;
+    tod = {
+      enable = true;
+      driver = pkgs.libfprint-2-tod1-goodix;
+    };
+  };
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
