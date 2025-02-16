@@ -20,5 +20,7 @@
     wget
     neovim
     lazygit
+    pciutils
+    usbutils
   ];
 }
