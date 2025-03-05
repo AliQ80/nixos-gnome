@@ -1,5 +1,5 @@
 _: let
-  onePassPath = "~/.1password/agent.sock";
+  onePassPath = "home/ali/.1password/agent.sock";
 in
 {
   programs.ssh = {
