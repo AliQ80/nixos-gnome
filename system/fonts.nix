@@ -4,11 +4,7 @@
     home.packages = with pkgs; [
     
       # nerdfonts
-      (nerdfonts.override { 
-        fonts = [ 
-          "JetBrainsMono" 
-        ]; 
-      })
+      nerd-fonts.jetbrains-mono
       
       # google-fonts
       (google-fonts.override { 
@@ -17,6 +13,10 @@
           "Audiowide"
           "Nova Square"
           "Chathura"
+          "Inter"
+          "IBM Plex Serif"
+          "Merriweather"
+          "Libre Baskerville"
         ]; 
       })
       
