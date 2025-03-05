@@ -10,8 +10,9 @@
     settings = {
 
       main = {
-        font = "JetBrainsMono NF:size=14";
+        font = "JetBrainsMono NF:size=8";
         dpi-aware = "yes";
+        initial-window-mode = "maximized";
       };
 
       mouse = {
