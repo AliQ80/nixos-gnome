@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware.nix
+      # inputs.home-manager.nixosModules.default
     ];
 
   # Bootloader.
@@ -68,7 +69,8 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  # hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -108,15 +110,16 @@
     home-manager
     fprintd
     gnome-extension-manager
-    _1password
+    _1password-cli
     _1password-gui
-    obsidian
-    vivaldi
-    google-chrome
-    discord
-    zoom-us
   ];
 
+  home-manager = {
+    # extraSpecialArgs = { inherit inputs; };
+    users = {
+      "ali" = import ./home.nix;
+    };
+  };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
