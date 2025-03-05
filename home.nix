@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, system, inputs, ... }:
 
 {
   imports = [
@@ -12,6 +12,7 @@
     ./user/shell/cli.nix
     ./user/shell/helix.nix
     ./user/shell/lsp.nix
+    ./user/shell/nh.nix
 
   # Terminal Emulators
     ./user/apps/terminal/alacritty.nix
@@ -21,7 +22,9 @@
   # GUI Apps
     ./user/apps/gnome-extensions/extension-list.nix
     ./user/apps/gui/apps.nix
+    # ./user/apps/gui/emacs.nix
     ./user/apps/gui/office.nix
+    # ./user/apps/gui/zen.nix
     
   # System Apps
     ./system/zsh.nix
@@ -54,6 +57,7 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
+    # inputs.zen-browser.packages."${system}".specific
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
