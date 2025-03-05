@@ -2,7 +2,12 @@
 
 ## start a nix shell with git
 ```
-nix-shell -p git helix
+nix-shell -p git helix gh
+```
+
+## login to github
+```
+gh auth login
 ```
 
 ## Get the files
@@ -19,6 +24,11 @@ cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/hardware.nix
 ## build the system
 ```bash
 sudo nixos-rebuild switch --flake ~/.dotfiles
+```
+
+## reboot the system
+```
+reboot
 ```
 
 ## build home configuration
