@@ -23,4 +23,12 @@
     pciutils
     usbutils
   ];
+
+  programs.gh = {
+    enable = true;
+  };
+  
+  programs.fzf = {
+    enable = true;
+  };
 }
